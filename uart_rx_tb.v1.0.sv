@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module uart_tx_tb_1();
+module uart_rx_tb_1();
   reg clk;
   reg rst;
   reg rx;
