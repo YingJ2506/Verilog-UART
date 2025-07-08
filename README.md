@@ -54,6 +54,10 @@ EPWave 波型圖可視化測試結果（見附圖）
 ![image](https://github.com/user-attachments/assets/88ed4a1c-8540-4bf0-8332-d13f394c7025)
 ![image](https://github.com/user-attachments/assets/4c0b4317-5dc9-461f-afa0-1a8f00d15a0b)
 
+## Lookback測試
+![image](https://github.com/user-attachments/assets/f9c37b69-4088-425a-8b6e-aefc0b5b8921)
+
+
 # 修正心得
 - 輸出邏輯設計： 在設計 TX/RX 模組時，參考以往 FIFO 模組中採用 assign output = output_s; 的方式，讓邏輯與輸出分開，提高模組可維護性。並特別注意 reg 計數器的位寬設定，避免 overflow 或範圍不足問題。
 - TX 傳輸結束判斷錯誤： 原本在 TX 模組中使用 bit_c == 10 判斷資料傳送完成，導致傳輸多等一拍才釋放 busy 訊號，待更版修正為 bit_c == 9 即釋放，避免多餘延遲。
